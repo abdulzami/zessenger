@@ -22,9 +22,10 @@ export async function POST(request: Request) {
       },
     });
 
-    return NextResponse.json(user);
+    // return NextResponse.json(user);
+    return NextResponse.json({"oi":"success"})
   } catch (error) {
-    console.log(error, "REGISTRATION_ERROR");
+    // console.log(error, "REGISTRATION_ERROR");
     return new NextResponse("Internal Error", { status: 500 });
   }
 }
