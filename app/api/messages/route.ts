@@ -59,8 +59,8 @@ export async function POST(request:Request){
             }
         });
 
-        // return NextResponse.json(newMessage)
-        return NextResponse.json({"oi":"success"})
+        return NextResponse.json(newMessage)
+        // return NextResponse.json({"oi":"success"})
 
     }catch(error:any){
         console.log(error,'ERROR_MESSAGES');

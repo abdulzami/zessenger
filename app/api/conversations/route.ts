@@ -34,8 +34,8 @@ export async function POST(request:Request){
                 }
             })
 
-            // return NextResponse.json(newConversation);
-            return NextResponse.json({"oi":"success"})
+            return NextResponse.json(newConversation);
+            // return NextResponse.json({"oi":"success"})
         }
 
         const existingConversations = await prisma.conversation.findMany({
@@ -59,6 +59,7 @@ export async function POST(request:Request){
 
         if(singleConversation){
             return NextResponse.json(singleConversation);
+            // return NextResponse.json({"oi":"success"})
         }
 
         const newConversation = await prisma.conversation.create({
@@ -79,8 +80,8 @@ export async function POST(request:Request){
             }
         })
         
-        // return NextResponse.json(newConversation);
-        return NextResponse.json({"oi":"success"})
+        return NextResponse.json(newConversation);
+        // return NextResponse.json({"oi":"success"})
 
 
     }catch(error:any){

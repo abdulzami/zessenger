@@ -37,8 +37,8 @@ export async function DELETE(request: Request,{params}:{params:IParams}){
             }
         })
         
-        // return NextResponse.json(deletedConversation);
-        return NextResponse.json({"oi":"success"})
+        return NextResponse.json(deletedConversation);
+        // return NextResponse.json({"oi":"success"})
 
     }catch(error:any){
         console.log(error,'ERROR_CONVERSATION_DELETE');

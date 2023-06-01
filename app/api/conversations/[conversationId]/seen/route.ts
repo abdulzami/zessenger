@@ -38,8 +38,8 @@ export async function POST(request:Request,{ params } : { params:IParams }){
         const lastMessage = conversation.messages[conversation.messages.length - 1];
 
         if(!lastMessage){
-            // return NextResponse.json(conversation);
-            return NextResponse.json({"oi":"success"})
+            return NextResponse.json(conversation);
+            // return NextResponse.json({"oi":"success"})
         }
 
         //update seen of last message
@@ -60,8 +60,8 @@ export async function POST(request:Request,{ params } : { params:IParams }){
             }
         })
 
-        // return NextResponse.json(updatedMessage)
-        return NextResponse.json({"oi":"success"})
+        return NextResponse.json(updatedMessage)
+        // return NextResponse.json({"oi":"success"})
 
     }catch(error:any){
         console.log(error,'ERROR_MESSAGES_SEEN');
